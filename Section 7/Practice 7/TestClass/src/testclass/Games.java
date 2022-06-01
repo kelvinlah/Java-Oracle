@@ -14,11 +14,11 @@ import java.util.Scanner;
 public class Games {
     
     public static void answerTheQuestion(Card card){
-        card.setCredit(-3300);
-        if(card.getCredit() < 0){
+        card.setCredit(-1);
+        if(card.getCredit() <= 0){
             System.out.println("Insufficient Credits");
         }
-        System.out.println("-3300 Credits\nAnswer the question correctly!");
+        System.out.println("-1 Credit\nAnswer the question correctly!");
         boolean check = false;
         int trueAmount = 0;
 
@@ -29,7 +29,7 @@ public class Games {
         int answer; 
         int ticketsWin;
         
-        try (Scanner sc = new Scanner(System.in)) {
+        Scanner sc = new Scanner(System.in);
             System.out.println("First Question");
             System.out.print(a + " x " + b + " = ");
             answer = sc.nextInt();
@@ -51,20 +51,21 @@ public class Games {
             if (answer == a-b){
                 trueAmount++;
             }
-        }
+            
         if (trueAmount == 0){
             System.out.println("Try Again Next Time!");
         }else if(trueAmount < 3){
-            ticketsWin = trueAmount * 30;
+            ticketsWin = trueAmount * 3;
             System.out.println("Congrats, You have won " + ticketsWin + " tickets");
             card.setTicket(ticketsWin);
         }else {
-            ticketsWin = trueAmount * 30 + 10;
+            ticketsWin = trueAmount * 3 + 1;
             System.out.println("Congrats, You have won " + ticketsWin + " tickets");
             card.setTicket(ticketsWin);
         }
         
-        System.out.println("Your");
+        System.out.println("Your Credit = " + card.getCredit());
+        System.out.println("Your Ticket = " + card.getTicket());
     }
 
 }

@@ -11,13 +11,19 @@ package testclass;
  */
 public class Card {
     private int credit, ticket;
-    private static long cardNum;
+    private long cardNum;
     
+    public Card(){
+        setCardNum();
+    }
     
-    public static long getCardNum(){        
+    private void setCardNum(){     
         long min = 601_211_000;
-        long max = 601_231_234;
-        cardNum = (long) (Math.random() * (max - min) + min);       
+        long max = 601_212_000;
+        cardNum = (long) (Math.random() * (max - min) + min);    
+    }
+    
+    public long getCardNum(){   
         return cardNum;
     }
     
@@ -35,11 +41,5 @@ public class Card {
     
     public int getTicket(){
         return ticket;
-    }
-    
-    public void displayInfo(){
-        System.out.println(getCredit());
-        System.out.println(getTicket());
-        System.out.println(getCardNum());
     }
 }
