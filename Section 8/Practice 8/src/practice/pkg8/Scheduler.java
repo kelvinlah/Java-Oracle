@@ -32,12 +32,9 @@ public class Scheduler {
                 System.out.println("Too cold to play.");
                 tempLimit++;
             }else if(Scheduler.getTemperature() > 10 && Scheduler.getTemperature() <= 35){
-                for (int i = 0; i<2; i++){
-                    
-                    Games.startGame(true);
-                }
+                Games.startGame(2);
             }else {
-                Games.startGame(false);
+                Games.startGame(1);
             }  
         }
         System.out.println("Season is Over");

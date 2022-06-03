@@ -18,28 +18,19 @@ public class Games {
     private static Teams team3 = new Teams();
     private static Teams team4 = new Teams();
   
-    private static ArrayList<Integer> game = new ArrayList<>();
+    private static ArrayList<Integer> temperature = new ArrayList<>();
     
-    static void startGame(boolean allPlay){
-        if(allPlay){
-            allPlay();
-        }else{
-            onlyTwoPlay();
+    static void startGame(int gamesPlayed, int temperature){
+        for(int i = 0; i<gamesPlayed; i++){
+            Games.temperature.add(temperature);
+            int homeTeam = num.nextInt(4) + 1;
+            int awayTeam;
+            do {
+                awayTeam = num.nextInt(4) + 1;
+            }while(homeTeam == awayTeam);
+            
+            
         }
-    }
-    
-    static void onlyTwoPlay(){
-        gameCount++;
-        game.add(gameCount);
-        int homeTeam = num.nextInt(4) + 1;
-        int awayTeam;
-        do {
-            awayTeam = num.nextInt(4) + 1;
-        }while (homeTeam == awayTeam);
-    }
-    
-    static void allPlay(){
-        
     }
     
     static void result(){

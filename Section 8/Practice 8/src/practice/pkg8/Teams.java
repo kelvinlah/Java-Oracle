@@ -27,7 +27,7 @@ public class Teams {
     }
         
     static void setTeamWin(int winTotal){
-        Teams.winTotal = winTotal;
+        Teams.winTotal += winTotal;
     }
     
     static int getTeamWin(){
@@ -35,7 +35,7 @@ public class Teams {
     }
     
     static void setTeamLosses(int lossTotal){
-        Teams.lossTotal = lossTotal;
+        Teams.lossTotal += lossTotal;
     }
     
     static int getTeamLosses(){
@@ -43,7 +43,7 @@ public class Teams {
     }
     
     static void setTeamTies(int tieTotal){
-        Teams.tieTotal = tieTotal;
+        Teams.tieTotal += tieTotal;
     }
     
     static int getTeamTies(){
@@ -51,7 +51,7 @@ public class Teams {
     }
     
     static void setGoalTotal(int goalScored){
-        Teams.goalScored = goalScored;
+        Teams.goalScored += goalScored;
     }
     
     static int getGoalTotal(){            
@@ -59,7 +59,7 @@ public class Teams {
     }
     
     static void setGoalAllowed(int goalAllowed){
-        Teams.goalAllowed = goalAllowed;
+        Teams.goalAllowed += goalAllowed;
     }
     
     static int getGoalAllowed(){
