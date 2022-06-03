@@ -35,6 +35,7 @@ public class TestClass {
         
         //try to play a game and request a prize using card 1
         Games.answerTheQuestion(card1);
+        System.out.println("");
         Terminal.exchangeTicketsToPrize(card1);
     }
 }
