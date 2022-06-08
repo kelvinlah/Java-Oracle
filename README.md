@@ -1,1 +1,1 @@
-# Learning Java With Oracle Academy
+THIS REPOSITORY WAS CREATED FOR LEARNING PURPOSES
